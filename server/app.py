@@ -7,7 +7,7 @@ def index():
 
 @app.route("/hello")
 def hello():
-    return "Hello, Staging"
+    return "Hello, Prod"
 
 @app.route("/gimme_json", methods=['GET'])
 def send_json():
