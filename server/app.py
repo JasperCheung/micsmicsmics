@@ -6,10 +6,13 @@ app = Flask(__name__)
 try:
     app_settings = os.environ['APP_SETTINGS']
     print("WE SEE:", os.environ['APP_SETTINGS'])
+    app.config.from_object(app_settings)
+
 except:
     app_settings = "config.DevelopmentConfig"
+    app.config.from_object(app_settings)
 
-app.config.from_object(app_settings)
+
 print(app_settings)
 
 
